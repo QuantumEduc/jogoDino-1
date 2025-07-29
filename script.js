@@ -9,7 +9,7 @@ const gameAreaWidth = document.getElementById("gameArea").offsetWidth;
 function Jump() {
     if(isJumping)return;
     isJumping=true;
-    dino.style.animation="jump 0.5sease-out"
+    dino.style.animation="jump 0.5s ease-out";
     setTimeout(()=>{
         dino.style.animation="";
      isJumping=false
@@ -21,9 +21,9 @@ document.addEventListener("keydown",function(event){
     }
 });
 function moveobstaculo(){
-    letobstaculoPos=obstaculo.offsetLeft;
-    obstaculo.style.left=obstaculopos - speed + "px"
-    if(obstaculopos<=20){
+    let obstaculoPos=obstaculo.offsetLeft;
+    obstaculo.style.left=obstaculoPos - speed + "px"
+    if(obstaculoPos<=20){
         obstaculo.style.left=gameAreaWidth + "px";
     }
 checkcollison();
